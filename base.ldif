@@ -1,0 +1,4 @@
+dn: dc=company,dc=com
+objectClass: top
+objectClass: domain
+dc: company

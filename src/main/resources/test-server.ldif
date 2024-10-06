@@ -1,0 +1,39 @@
+dn: dc=company,dc=com
+objectClass: top
+objectClass: domain
+dc: company
+
+# Organization Entry
+dn: o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: organization
+o: ACompany
+
+# Organizational Unit: Admins
+dn: ou=Admins,dc=company,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Admins
+
+# Admin User Entry
+dn: cn=admin,ou=Admins,dc=company,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: admin
+sn: Administrator
+uid: admin
+userPassword: admin
+
+# Organizational Unit: Enter Department
+dn: ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Enter
+
+# Organizational Unit: People in Enter Department
+dn: ou=People,ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People

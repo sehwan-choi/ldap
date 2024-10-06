@@ -1,0 +1,100 @@
+# Organization Entry
+dn: o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: organization
+o: ACompany
+
+# Organizational Unit: Admins
+dn: ou=Admins,dc=company,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Admins
+
+# Admin User Entry
+dn: cn=admin,ou=Admins,dc=company,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: admin
+sn: Administrator
+uid: admin
+userPassword: admin
+
+# Organizational Unit: Enter Department
+dn: ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Enter
+
+# Organizational Unit: People in Enter Department
+dn: ou=People,ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: People
+
+# User Entry: Ava in Enter Department
+dn: cn=Ava,ou=People,ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Ava
+sn: Smith
+uid: ava.enter
+mail: ava.smith@company.com
+telephoneNumber: +1 234 567 8901
+userPassword: {SHA}abc123def456
+title: Manager
+description: Team lead for Enter department
+
+# User Entry: Mia in Enter Department
+dn: cn=Mia,ou=People,ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Mia
+sn: Johnson
+uid: mia.enter
+mail: mia.johnson@company.com
+telephoneNumber: +1 234 567 8902
+userPassword: {SHA}xyz789ghi012
+title: Developer
+description: Software developer in Enter department
+
+# User Entry: Zoe in Enter Department
+dn: cn=Zoe,ou=People,ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Zoe
+sn: Brown
+uid: zoe.enter
+mail: zoe.brown@company.com
+telephoneNumber: +1 234 567 8903
+userPassword: {SHA}mno456pqr789
+title: Designer
+description: UX/UI Designer for Enter department
+
+# Organizational Unit: Groups in Enter Department
+dn: ou=Groups,ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: Groups
+
+# Group Entry: Admins Group
+dn: cn=Admins,ou=Groups,ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: Admins
+member: cn=Ava,ou=People,ou=Enter,o=ACompany,dc=company,dc=com
+
+# Group Entry: Users Group
+dn: cn=Users,ou=Groups,ou=Enter,o=ACompany,dc=company,dc=com
+objectClass: top
+objectClass: groupOfNames
+cn: Users
+member: cn=Mia,ou=People,ou=Enter,o=ACompany,dc=company,dc=com
+member: cn=Zoe,ou=People,ou=Enter,o=ACompany,dc=company,dc=com

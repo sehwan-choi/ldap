@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: ldap
+
+
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
